@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			html,
+			body,
+			div,
+			span,
+			object,
+			iframe,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			p,
+			blockquote,
+			pre,
+			a,
+			abbr,
+			acronym,
+			address,
+			big,
+			cite,
+			code,
+			del,
+			dfn,
+			em,
+			img,
+			ins,
+			kbd,
+			q,
+			samp,
+			small,
+			strike,
+			strong,
+			sub,
+			sup,
+			tt,
+			var,
+			dl,
+			dt,
+			dd,
+			ol,
+			ul,
+			li,
+			fieldset,
+			form,
+			label,
+			legend,
+			table,
+			caption,
+			tbody,
+			tfoot,
+			thead,
+			tr,
+			th,
+			td {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				outline: 0;
+				font-family: "微软雅黑";
+			}
+			
+			html,
+			body {
+				background-color: #808080;
+			}
+			
+			.mainbody {
+				width: 90%;
+				margin: 0 auto;
+				background-color: #CCCCCC;
+			}
+			/*导航栏*/
+			
+			#headNav {
+				width: 100%;
+				background-color: #000000;
+				overflow: hidden;
+				height: 70px;
+				border-radius: 5px;
+			}
+			
+			#headNav nav {
+				float: right;
+			}
+			
+			#headNav nav ul li {
+				float: left;
+				list-style-position: outside;
+				height: 70px;
+				line-height: 70px;
+				margin-right: 20px;
+				color: #FFFFFF;
+				width: 120px;
+				text-align: center;
+			}
+			
+			#headNav nav ul li:hover {
+				background-color: #808080;
+				color: #000000;
+			}
+			
+			#headNav img {
+				display: block;
+				width: auto;
+				height: 70px;
+				text-align: center;
+				float: left;
+			}
+			/*文章样式 */
+			
+			.bodyDesign {
+				margin: 20px;
+				background-color: #FFFFFF;
+				border-radius: 5px;
+				padding: 20px;
+			}
+			
+			.bodyDesign h2 {
+				height: 60px;
+				line-height: 60px;
+				font-weight: 500;
+			}
+			
+			.bodyDesign h3 {
+				font-weight: 500;
+				height: 40px;
+				line-height: 40px;
+				color: #808080;
+			}
+			
+			.bodyDesign address {
+				font-family: "微软雅黑";
+				font-style: normal;
+				color: #808080;
+				height: 40px;
+				line-height: 40px;
+			}
+			
+			.bodyDesign p {
+				line-height: 25px;
+				text-indent: 2em;
+				font-size: 14px;
+			}
+			
+			.bodyDesign img {
+				display: block;
+				width: 200px;
+				margin: 20px 0px;
+			}
+			
+			.bodyDesign ul {
+				text-indent: 2em;
+			}
+			
+			.bodyDesign ul li {
+				list-style-type: none;
+			}
+			
+			.bodyDesign figure {
+				border: 1px solid #808080;
+				border-radius: 5px;
+				text-align: center;
+				width: 200px;
+				padding: 10px;
+			}
+			
+			.bodyDesign figure figcaption {
+				margin-top: -5px;
+			}
+			
+			.bodyDesign figure img {
+				display: block;
+				margin: 5px auto;
+			}
+			
+			.bodyDesign ol {
+				text-indent: 2em;
+				list-style-position: inside;
+				margin: 10px 0px;
+			}
+			
+			.bodyDesign table {
+				border: 1px solid #FFFFFF;
+				border-spacing: 0;
+				width: 100%;
+			}
+			
+			.bodyDesign table th {
+				background-color: #000000;
+				color: #FFFFFF;
+				width: 500px;
+				border: 1px solid #808080;
+			}
+			
+			.bodyDesign table td {
+				border: 1px solid #808080;
+			}
+			
+			.bodyDesign table tr:last-child {
+				background-color: #808080;
+			}
+			/*侧边栏*/
+			
+			.asideDesign {
+				margin: 40px 20px 0px 20px;
+				background-color: #FFFFFF;
+				border-radius: 5px;
+				padding: 20px;
+			}
+			
+			.asideDesign h2 {
+				font-size: 18px;
+				font-weight: 500;
+				width: 500px;
+				margin-left: 20px;
+				border-left: 5px solid #808080;
+				padding-left: 10px;
+			}
+			
+			.asideDesign form {
+				width: 100%;
+				margin: 10px auto;
+				overflow: hidden;
+			}
+			.asideDesign .form1{
+				float: left;
+				text-align: right;
+				width: 40%;
+			}
+			.asideDesign .form2{
+				float: left;
+				width: 50%;
+				margin-left: 10px;
+			}
+			
+			.asideDesign form span {
+				color: #808080;
+				display: block;
+				font-size: 12px;
+				height: 20px;
+				line-height: 20px;
+				margin-bottom: 20px;
+			}
+			.asideDesign #submitButton{
+				width: 100%;
+				clear: both;
+				background-color:#000000;
+				height: 50px;
+				border-radius: 10px;
+				margin-top: 20px;
+				color: #FFFFFF;
+				font-size: 20px;
+			}
+			.asideDesign #submitButton:hover{
+				background-color: #808080;
+				color: #000000;
+			}
+			/*版权所有部分*/
+			footer{
+				width: 100%;
+				background-color: #000000;
+				color: #FFFFFF;
+				font-size: 14px;
+				text-align: center;
+				height: 60px;
+				line-height: 60px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mainbody">
+			<div id="headNav">
+				<img src="http://img.zcool.cn/community/0190b7559a961232f87598b557e260.png" />
+				<nav>
+					<ul>
+						<li><a>导航链接一</a></li>
+						<li><a>导航链接二</a></li>
+						<li><a>导航链接三</a></li>
+						<li><a>导航链接四</a></li>
+					</ul>
+				</nav>
+			</div>
+			<article class="bodyDesign">
+				<h2>文章一级标题</h2>
+				<h3>文章二级标题</h3>
+				<address>文章作者&nbsp;文章发表时间</address>
+				<p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，换行了</p>
+				<p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，
+					<a href="http://ife.baidu.com" title="我是连接" target="_blank">我是一个连接</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落.</p>
+				<img src="http://img.zcool.cn/community/01b67355605d940000009af01fc609.jpg" />
+				<p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，
+					<a href="http://ife.baidu.com" title="我是连接" target="_blank">我是一个连接</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落.</p>
+			</article>
+			<article class="bodyDesign">
+				<h2>文章一级标题</h2>
+				<h3>文章二级标题</h3>
+				<address>文章作者&nbsp;文章发表时间</address>
+				<p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，换行了</p>
+				<p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，
+					<a href="http://ife.baidu.com" title="我是连接" target="_blank">我是一个连接</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落.</p>
+				<img src="http://img.zcool.cn/community/01b67355605d940000009af01fc609.jpg" />
+				<ul>
+					<li>列表项目一</li>
+					<li>列表项目二</li>
+					<li>列表项目三</li>
+				</ul>
+			</article>
+			<article class="bodyDesign">
+				<h2>图片</h2>
+				<figure>
+					<figcaption>好看的图片</figcaption>
+					<img src="http://img.zcool.cn/community/01b67355605d940000009af01fc609.jpg" />
+				</figure>
+				<figure>
+					<figcaption>好看的图片</figcaption>
+					<img src="http://img.zcool.cn/community/01b67355605d940000009af01fc609.jpg" />
+				</figure>
+				<figure>
+					<figcaption>好看的图片</figcaption>
+					<img src="http://img.zcool.cn/community/01b67355605d940000009af01fc609.jpg" />
+				</figure>
+				<figure>
+					<figcaption>好看的图片</figcaption>
+					<img src="http://img.zcool.cn/community/01b67355605d940000009af01fc609.jpg" />
+				</figure>
+				<figure>
+					<figcaption>好看的图片</figcaption>
+					<img src="http://img.zcool.cn/community/01b67355605d940000009af01fc609.jpg" />
+				</figure>
+
+			</article>
+			<article class="bodyDesign">
+				<h2>最后一篇文章的一级标题</h2>
+				<h3>文章二级标题</h3>
+				<address>文章作者&nbsp;文章发表时间</address>
+				<ol>
+					<li>排名一</li>
+					<li>排名二</li>
+					<li>排名三</li>
+				</ol>
+				<p>下面是一个表格，我们为表格添加了border方便观察。</p>
+				<table border="1">
+					<thead>
+						<tr>
+							<th>表头</th>
+							<th>表头</th>
+							<th>表头</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>内容</td>
+							<td>内容</td>
+							<td>内容</td>
+						</tr>
+						<tr>
+							<td>内容</td>
+							<td>内容</td>
+							<td>内容</td>
+						</tr>
+						<tr>
+							<td>内容</td>
+							<td>内容</td>
+							<td>内容</td>
+						</tr>
+						<tr>
+							<td>内容</td>
+							<td>内容</td>
+							<td>内容</td>
+						</tr>
+						<tr>
+							<td>总计</td>
+							<td colspan="2">1000</td>
+						</tr>
+					</tbody>
+				</table>
+			</article>
+			<aside class="asideDesign">
+				<h2>这以后是个侧栏，这是侧栏标题。</h2>
+				<form method="post" action="">
+					<div class="form1">
+						<label for="myEmail" s>请输入邮箱地址</label><br /><br /><br />
+						<label for="myPass">请输入密码</label><br />
+						<label for="myPassA">请重复输入密码</label><br /><br /><br />
+						<label>性别</label><br /><br />
+						<label>城市</label><br /><br />
+						<label>爱好</label><br /><br />
+						<label>个人描述</label><br />
+					</div>
+					<div class="form2">
+						<input type="email" id="myEmail" placeholder="这是一个文本输入框" /><br />
+						<span>邮箱格式请按标准输入！</span>
+						<input type="password" id="myPass" placeholder="···········" pattern="[A-z]{6,16}" /><br />
+						<input type="password" id="myPassA" placeholder="···········" pattern="[A-z]{6,16}" />
+						<span>密码为6-16位英文数字！</span>
+						<input type="radio" name="sex" id="man" /><label for="man">男</label>
+						<input type="radio" name="sex" id="woman" /><label for="woman">女</label><br /><br />
+						<select>
+							<option>北京</option>
+							<option>上海</option>
+							<option>广东</option>
+							<option>香港</option>
+							<option>杭州</option>
+						</select><br /><br />
+						<input type="checkbox" name="ah1" id="ah1" /><label for="ah1">运动</label>
+						<input type="checkbox" name="ah2" id="ah2" /><label for="ah2">艺术</label>
+						<input type="checkbox" name="ah3" id="ah3" /><label for="ah3">科学</label><br /><br />
+						<textarea cols="20" rows="5" placeholder="这是一个多行输入框"></textarea>
+					</div>
+					<input type="submit" value="确认提交" id="submitButton"/>
+				</form>
+			</aside>
+			<footer>版权所有&copy;</footer>
+		</div>
+	</body>
+
+</html>
